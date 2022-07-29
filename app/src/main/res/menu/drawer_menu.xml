@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="My requests" />
+        <item
+            android:id="@+id/cars"
+            android:icon="@drawable/ic_baseline_car_repair_24"
+            android:title="My cars" />
+        <item
+            android:id="@+id/wallet"
+            android:icon="@drawable/ic_baseline_payment_24"
+            android:title="Fix it pay" />
+
+
+
+        <item
+            android:id="@+id/logout"
+                android:icon="@drawable/ic_baseline_logout_24"
+            android:title="Logout" />
+    </group>
+</menu>

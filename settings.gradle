@@ -1,0 +1,3 @@
+include ':acceptsdk-release'
+include ':app'
+rootProject.name = "eslah"

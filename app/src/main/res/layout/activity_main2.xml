@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+
+    android:background="#00FFFFFF"
+    tools:openDrawer="start">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#00FFFFFF">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginBottom="150dp">
+
+            <fragment
+                android:id="@+id/map2"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:fitsSystemWindows="true">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voucher_box"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#7EFFFFFF"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/menu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            map:srcCompat="@drawable/sale" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView44"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0"
+                                android:text="Special Offer"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/voucher_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="start"
+                                android:text="Order now and get 50% offer up to 50 L.E"
+                                android:textColor="#424242"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/menu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    map:cardCornerRadius="1000dp"
+                    map:cardElevation="2dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="7dp"
+                        app:srcCompat="@drawable/menu"
+                        tools:layout_conversion_absoluteHeight="34dp"
+                        tools:layout_conversion_absoluteWidth="34dp"
+                        tools:layout_editor_absoluteX="364dp"
+                        tools:layout_editor_absoluteY="13dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/gradiant"
+            android:clickable="false"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/search_for_providers_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_conversion_absoluteHeight="68dp"
+                tools:layout_conversion_absoluteWidth="411dp">
+
+                <Button
+                    android:id="@+id/search_for_providers"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/round_cyan"
+                    android:capitalize="characters"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:text="Search for Technician"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:backgroundTint="#237CCC" />
+
+                <ProgressBar
+                    android:id="@+id/create_order_loading"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/scrollview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:animateLayoutChanges="true"
+                android:background="#00FFFFFF"
+
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:touchscreenBlocksFocus="false"
+                app:layout_constraintBottom_toTopOf="@+id/search_for_providers_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_conversion_absoluteHeight="360dp"
+                tools:layout_conversion_absoluteWidth="411dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:orientation="vertical"
+                    android:touchscreenBlocksFocus="false">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/current_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp"
+                        android:transitionName="current_location"
+                        map:cardBackgroundColor="#FFFFFF"
+                        map:cardCornerRadius="1000dp"
+                        map:cardElevation="10dp"
+                        map:layout_constraintBottom_toTopOf="@+id/choose_location"
+                        map:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:src="@drawable/placeholder1"
+
+                            tools:ignore="VectorDrawableCompat" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:clickable="true"
+                        app:cardBackgroundColor="#00FFFFFF"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:animateLayoutChanges="true"
+
+                            android:background="#00FFFFFF"
+                            android:orientation="vertical">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cant_detect_issue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="0"
+                                        app:cardBackgroundColor="#FFFFFF"
+                                        app:cardElevation="2dp"
+                                        map:cardCornerRadius="10dp">
+
+                                        <TextView
+                                            android:id="@+id/cant_detect_issue_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/ic_baseline_search_24"
+                                            android:drawableLeft="@drawable/ic_baseline_search_24"
+                                            android:drawablePadding="7dp"
+                                            android:fontFamily="@font/source_sans_pro"
+                                            android:padding="10dp"
+                                            android:text="Can't detect the issue"
+                                            android:textColor="#000000"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/motor_issue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+
+                                        android:layout_weight="0"
+                                        app:cardElevation="2dp"
+                                        map:cardBackgroundColor="#FFFFFF"
+                                        map:cardCornerRadius="10dp">
+
+                                        <TextView
+                                            android:id="@+id/motor_issue_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/engine"
+                                            android:drawablePadding="7dp"
+                                            android:fontFamily="@font/source_sans_pro"
+                                            android:padding="10dp"
+                                            android:text="Motor Issue"
+                                            android:textColor="#000000"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/carbattary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="0"
+                                        app:cardElevation="2dp"
+                                        map:cardBackgroundColor="#FFFFFF"
+                                        map:cardCornerRadius="10dp">
+
+                                        <TextView
+                                            android:id="@+id/battery_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/battery1"
+                                            android:drawablePadding="7dp"
+                                            android:fontFamily="@font/source_sans_pro"
+                                            android:padding="10dp"
+                                            android:text="Change or Charge battery"
+                                            android:textColor="#000000"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/changeoil"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="0"
+                                        app:cardElevation="2dp"
+                                        map:cardBackgroundColor="#FFFFFF"
+                                        map:cardCornerRadius="10dp">
+
+                                        <TextView
+                                            android:id="@+id/oil_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/oil_bottle"
+                                            android:drawablePadding="7dp"
+                                            android:fontFamily="@font/source_sans_pro"
+                                            android:padding="10dp"
+                                            android:text="Change oil"
+                                            android:textColor="#000000"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/fuel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="0"
+                                        app:cardElevation="2dp"
+                                        map:cardBackgroundColor="#FFFFFF"
+                                        map:cardCornerRadius="10dp">
+
+                                        <TextView
+                                            android:id="@+id/fuel_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/fuel1"
+                                            android:drawablePadding="7dp"
+                                            android:fontFamily="@font/source_sans_pro"
+                                            android:padding="10dp"
+                                            android:text="Fuel"
+                                            android:textColor="#000000"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/tire"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="0"
+                                        app:cardElevation="2dp"
+                                        map:cardBackgroundColor="#FFFFFF"
+                                        map:cardCornerRadius="10dp">
+
+                                        <TextView
+                                            android:id="@+id/tire_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/wheel"
+                                            android:drawablePadding="7dp"
+                                            android:fontFamily="@font/source_sans_pro"
+                                            android:padding="10dp"
+                                            android:text="new Tire"
+                                            android:textColor="#000000"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="15dp"
+                                app:cardBackgroundColor="#00FFFFFF"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/location"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/borderimg"
+                                    android:drawableEnd="@drawable/ic_baseline_my_location_24"
+                                    android:drawablePadding="10dp"
+                                    android:editable="false"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:hint="Set Location"
+                                    android:padding="10dp"
+                                    android:textColor="#000000"
+                                    android:textColorHint="#707070"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:transitionName="location" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:id="@+id/choosencar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView62"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="0dp"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:text="Car:"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/setcar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="0"
+                                    map:cardBackgroundColor="#FFFFFF"
+                                    map:cardCornerRadius="100dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:padding="5dp"
+                                        app:srcCompat="@drawable/ic_baseline_add_24"
+                                        tools:ignore="VectorDrawableCompat" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:id="@+id/car_info_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="0"
+                                        app:cardBackgroundColor="#FFFFFF"
+                                        app:cardCornerRadius="100dp">
+
+                                        <ImageView
+                                            android:id="@+id/carimage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+
+                                            app:srcCompat="@drawable/mercedeslogo" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_weight="0"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/carname"
+                                            android:layout_width="100dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="0dp"
+                                            android:layout_marginRight="0dp"
+                                            android:layout_weight="0"
+                                            android:gravity="center"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="GLB SUV"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/choose_car"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:gravity="start"
+                                    android:text="@string/Change"
+                                    android:textColor="#237CCC"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/payment_way"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:drawableStart="@drawable/money"
+                                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/source_sans_pro"
+                                android:gravity="center_vertical"
+                                android:text="Cash"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/home_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#FFFFFF"
+        android:fitsSystemWindows="true"
+
+        app:headerLayout="@layout/nav_header_main"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
